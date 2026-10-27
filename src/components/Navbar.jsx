@@ -31,17 +31,17 @@ export default function Navbar({ activeTab, setActiveTab, walletInfo, onConnectW
           </div>
         </div>
 
-        {/* Navigation Tabs */}
-        <nav className="flex items-center gap-1 bg-slate-900/80 p-1.5 rounded-2xl border border-slate-800 text-xs font-medium">
+        {/* Navigation Tabs - Responsive Scrollable Bar */}
+        <nav className="flex items-center gap-1 bg-slate-900/80 p-1.5 rounded-2xl border border-slate-800 text-xs font-medium overflow-x-auto max-w-full py-1.5 px-2 scrollbar-none shadow-inner">
           <button
             onClick={() => setActiveTab('plan')}
-            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all ${
+            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all shrink-0 whitespace-nowrap ${
               activeTab === 'plan'
                 ? 'bg-gradient-to-r from-cyan-500/30 to-indigo-500/30 text-cyan-300 border border-cyan-400 shadow-sm shadow-cyan-500/20 font-bold'
                 : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
             }`}
           >
-            <Sparkles className="w-4 h-4 text-cyan-400" />
+            <Sparkles className="w-4 h-4 text-cyan-400 shrink-0" />
             <span>Mini-Project Plan</span>
             <span className="px-1.5 py-0.5 text-[9px] bg-cyan-500/20 text-cyan-300 rounded border border-cyan-500/40 uppercase font-mono">
               Sepolia
@@ -50,55 +50,55 @@ export default function Navbar({ activeTab, setActiveTab, walletInfo, onConnectW
 
           <button
             onClick={() => setActiveTab('studio')}
-            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all ${
+            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all shrink-0 whitespace-nowrap ${
               activeTab === 'studio'
                 ? 'bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
             }`}
           >
-            <Mic className="w-4 h-4 text-cyan-400" />
+            <Mic className="w-4 h-4 text-cyan-400 shrink-0" />
             <span>Voice Studio</span>
           </button>
 
           <button
             onClick={() => setActiveTab('verify')}
-            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all ${
+            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all shrink-0 whitespace-nowrap ${
               activeTab === 'verify'
                 ? 'bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
             }`}
           >
-            <FileCheck2 className="w-4 h-4 text-indigo-400" />
+            <FileCheck2 className="w-4 h-4 text-indigo-400 shrink-0" />
             <span>Verify Audio</span>
           </button>
 
           <button
             onClick={() => setActiveTab('identity')}
-            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all ${
+            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all shrink-0 whitespace-nowrap ${
               activeTab === 'identity'
                 ? 'bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
             }`}
           >
-            <UserCheck className="w-4 h-4 text-purple-400" />
+            <UserCheck className="w-4 h-4 text-purple-400 shrink-0" />
             <span>Speaker Passports</span>
           </button>
 
           <button
             onClick={() => setActiveTab('explorer')}
-            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all ${
+            className={`flex items-center gap-2 px-3.5 py-2 rounded-xl transition-all shrink-0 whitespace-nowrap ${
               activeTab === 'explorer'
                 ? 'bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
             }`}
           >
-            <Cpu className="w-4 h-4 text-emerald-400" />
+            <Cpu className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>EVM Explorer</span>
           </button>
         </nav>
 
         {/* Right Utility: Theme Switcher, Network Badge & Web3 Wallet Connect */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex flex-wrap items-center justify-center gap-2">
           {/* Background Theme Switcher */}
           {availableThemes && onSelectTheme && (
             <div className="relative">

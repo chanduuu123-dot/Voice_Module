@@ -928,7 +928,7 @@ export default function SepoliaPlanInterface({ onNotify, walletInfo }) {
         <div className="space-y-8">
           
           {/* Stepper Progress Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {[
               { step: 1, title: 'Upload Audio', desc: 'WAV/MP3 validation & waveform' },
               { step: 2, title: 'SHA-256 Hash', desc: 'Avalanche bit matrix' },
