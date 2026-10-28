@@ -1,16 +1,11 @@
-# React + Vite
+# Blockchain integration placeholder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This folder reserves a place for a future Solidity smart contract.
 
-Currently, two official plugins are available:
+Suggested future contract responsibilities:
+1. Register a SHA-256 digest and registration timestamp.
+2. Emit an event for each registration.
+3. Allow querying whether a digest has been registered.
+4. Avoid storing raw audio or personal data on-chain.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Before implementing, define who can register hashes, whether duplicate hashes are allowed, how ownership claims are handled, and how contract events are verified. A blockchain registration does not prove the original audio was genuine.
